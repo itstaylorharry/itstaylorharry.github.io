@@ -4,41 +4,41 @@
 	<link rel="stylesheet" href="css/default.css" />
 	<script src="scripts/jquery-1.11.0.js"></script>
 	<script>
-			$(document).ready(function() {
-				$(window).load(function(){ // On load
-					$('#logo, #about').css({'height':(($(window).height()))+'px'});
-					if( $(document).scrollTop() > 500) {
-						$('#void-holder-b').show();
-						$('#void-holder-a').hide();
-						rotation = 180;
-						$('#arrow-down').rotate(rotation);
-					}else{
-						$('#void-holder-b').hide();
-						$('#void-holder-a').show();
-						rotation = 0;
-						$('#arrow-down').rotate(rotation);
-					}
-				});
-				$(window).resize(function(){ // On resize
-					$('#logo, #about').css({'height':(($(window).height()))+'px'});	
-				});
+		$(document).ready(function() {
+			$(window).load(function(){ // On load
+				$('#logo, #about').css({'height':(($(window).height()))+'px'});
+				if( $(document).scrollTop() > 500) {
+					$('#void-holder-b').show();
+					$('#void-holder-a').hide();
+					rotation = 180;
+					$('#arrow-down').rotate(rotation);
+				}else{
+					$('#void-holder-b').hide();
+					$('#void-holder-a').show();
+					rotation = 0;
+					$('#arrow-down').rotate(rotation);
+				}
 			});
+			$(window).resize(function(){ // On resize
+				$('#logo, #about').css({'height':(($(window).height()))+'px'});	
+			});
+		});
 	</script>
 	<script>
-			$(function() {
-			  $('a[href*=#]:not([href=#])').click(function() {
-			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			      var target = $(this.hash);
-			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			      if (target.length) {
-			        $('html,body').animate({
-			          scrollTop: target.offset().top
-			        }, 500);
-			        return false;
-			      }
-			    }
-			  });
-			});
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top
+		        }, 500);
+		        return false;
+		      }
+		    }
+		  });
+		});
 	</script>
 	<script>
 		$(window).scroll(function(){
