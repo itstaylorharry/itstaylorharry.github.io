@@ -1,0 +1,101 @@
+<head>
+	<title>Taylor Lawton</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes">
+	<link rel="stylesheet" href="css/default.css" />
+	<script src="scripts/jquery-1.11.0.js"></script>
+	<script>
+			$(document).ready(function() {
+				$(window).load(function(){ // On load
+					$('#logo, #about').css({'height':(($(window).height()))+'px'});
+					if( $(document).scrollTop() > 500) {
+						$('#void-holder-b').show();
+						$('#void-holder-a').hide();
+						rotation = 180;
+						$('#arrow-down').rotate(rotation);
+					}else{
+						$('#void-holder-b').hide();
+						$('#void-holder-a').show();
+						rotation = 0;
+						$('#arrow-down').rotate(rotation);
+					}
+				});
+				$(window).resize(function(){ // On resize
+					$('#logo, #about').css({'height':(($(window).height()))+'px'});	
+				});
+			});
+	</script>
+	<script>
+			$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 500);
+			        return false;
+			      }
+			    }
+			  });
+			});
+	</script>
+	<script>
+		$(window).scroll(function(){
+			var rotation = 0;
+			
+			jQuery.fn.rotate = function(degrees) {
+			  $('#arrow-down').css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+			               '-moz-transform' : 'rotate('+ degrees +'deg)',
+			               '-ms-transform' : 'rotate('+ degrees +'deg)',
+			               'transform' : 'rotate('+ degrees +'deg)',
+			               });
+			  $('#arrow-down').css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+			               '-moz-transform' : 'rotate('+ degrees +'deg)',
+			               '-ms-transform' : 'rotate('+ degrees +'deg)',
+			               'transform' : 'rotate('+ degrees +'deg)',
+			               });
+			};
+			
+			if( $(document).scrollTop() > 350 ) {	
+				$('#void-holder-b').show();
+				$('#void-holder-a').hide();
+				rotation = 180;
+				$('#arrow-down').rotate(rotation);
+				$('#arrow-down').css({'top' : '15' + 'px',
+				});	
+			}else{
+				$('#void-holder-b').hide();
+				$('#void-holder-a').show();
+				rotation = 0;
+				$('#arrow-down').rotate(rotation);
+				$('#arrow-down').css({'top' : '-30' + 'px'});
+			}
+	    }); 
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="logo" class="logo box box-transition">
+			<div class="content-box">
+				<div class="portrait"></div>
+				<h1>Taylor Lamb-Lawton</h1>
+				<p>I am a full time IT student at Flinders University. I have interests in graphic design, music, photography and programming.</p>
+			</div>
+				<div id="arrow-down" class="arrow-down box-transition"></div>
+				<a href="#about">
+					<div id="void-holder-a" class="void-holder-a"></div>
+				</a>
+				<a href="#logo">
+					<div id="void-holder-b" class="void-holder-b"></div>
+				</a>
+		</div>
+		<div id="about" class="box aboutme box-transition">
+			<div class="content-box">
+				<h1>about me</h1>
+				<p>I am a self created web designer. I am currently studying at Flinders University after two years of study at TAFE SA.</p><br />
+				<p>I have experience in ASP.NET, C#, Java, Objective-C, HTML5, CSS3, PHP and SQL. </p>
+			</div>
+		</div>
+	</div>
+</body>

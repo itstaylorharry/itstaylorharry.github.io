@@ -1,0 +1,103 @@
+html, body, h1, p {
+	padding: 0;
+	margin: 0;
+}
+.content-box p {
+	font-weight: 200;
+}
+
+body {
+	font-family: "Helvetica-Neue" "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
+	
+}
+
+.wrap {
+	background-color: #a3a0a0;
+	width: 100%;
+	height: 100%;
+}
+
+.box {
+	text-align: center;
+	box-shadow: inset 0 0 90px rgba(3, 3, 3, 0.10);
+}
+
+.box:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+
+.content-box {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	width: 50%;
+	font-size: 100%;
+	min-width: 300px;	
+}
+
+.logo {
+	background: #4fbfd1;
+}
+
+.portrait {
+	background: url('../images/portrait.png') no-repeat center center;
+	background-size: auto 290px;
+	height: 290px;
+	width: 193px;
+	margin: 10px auto;
+	box-shadow: 0px 0px 5px #444;
+
+}
+
+.aboutme {
+	background: #eb7171;	
+}
+
+.void-holder-a {
+	position: relative;
+	top: -96px;
+	height: 80px;
+}
+.void-holder-b {
+	position: relative;
+	top: -15px;
+	height: 80px;
+}
+
+.arrow-down {
+	background: url('../images/arrow-down.png') no-repeat center bottom;
+	background-size: 40px;
+	height: 16px;
+	position: relative;
+	top: -30px;
+}
+
+.box-transition {
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 568px) {
+	.logo, .aboutme {
+		min-height: 470px;
+	}
+	h1 {
+		font-size: 1.6em;
+	}
+	.arrow-down, .void-holder-a, .void-holder-b {
+		display: none;
+	}
+}
+
+@media (min-width: 568px) and (max-width: 1055px) {
+	.content-box {
+		margin-bottom: 56px;
+	}
+}
